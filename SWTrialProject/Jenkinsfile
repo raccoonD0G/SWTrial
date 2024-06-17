@@ -22,9 +22,9 @@ pipeline {
             steps {
                 // Java 파일들을 컴파일하여 생성된 클래스 파일을 classes 디렉토리에 저장
                 bat '''
-                    for /r %%i in (*.java) do (
-                        javac -encoding UTF-8 -cp lib/* -d classes %%i
-                    )
+                    javac -encoding UTF-8 -cp lib/* -d classes SWTrialProject/src/Book.java
+                    javac -encoding UTF-8 -cp lib/* -d classes SWTrialProject/src/BookSearch.java
+                    javac -encoding UTF-8 -cp lib/* -d classes SWTrialProject/src/BookSearchTest.java
                 '''
             }
         }
